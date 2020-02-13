@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link href="cdd/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <a><img src="img/logo.png" alt="логотип"></a>
+    <a><img src="img/logotip.png" alt="логотип"></a>
     <button type="button">Поиск:</button>
     <div>
       <a href="#">Закладки: 0</a>
@@ -46,11 +48,44 @@
     </nav>
   </header>
   <main>
-    <h1>Каталог</h1>
+    <h1 class="visually-hidden">Каталог</h1>
     <a href="index.html">На главную</a>
     <a href="catalog.html">каталог</a>
     <a href="#">инструмент</a>
     <h2>ПЕРФОРАТОРЫ</h2>
+    <form action="https://echo/htmlacademy.ru" oninput="priceoutput.value=pricecount.value" method="post">
+      <div><h3>фильтр:</h3></div>
+      <h4>цена:</h4>
+      <div>
+        <label for="pricecount"></label>
+        0<input type="range" id="pricecount" name="pricecount" min="0" max="30000" step="250">30000
+      </div>
+      <div>
+        <output name="priceoutput"></output>
+      </div>
+      <h4>производители:</h4>
+      <ul>
+        <label for="brand"></label>
+        <li><input type="checkbox" id="brand" name="brand" value="bosch" checked>BOSCH</li>
+        <li><input type="checkbox" id="brand" name="brand" value="interskol">ИНТЕРСКОЛ</li>
+        <li><input type="checkbox" id="brand" name="brand" value="makita" checked>MAKITA</li>
+        <li><input type="checkbox" id="brand" name="brand" value="dewalt">DEWALT</li>
+        <li><input type="checkbox" id="brand" name="brand" value="hitachi">HITACHI</li>
+            </ul>
+      <h4>питание:</h4>
+      <ul>
+        <label for="power"></label>
+          <li><input type="radio" name="power" id="power" value="battery" checked>АККУМУЛЯТОРНЫЕ</li>
+        <li><input type="radio" name="power" value="electricity">СЕТЕВЫЕ</li>
+            </ul>
+      <input type="submit" value="показать">
+    </form>
+    <div>
+      <h3>сортировка:</h3>
+      <button type="submit">по цене</button>
+      <button type="submit">по типу</button>
+      <button type="submit">по функционалу</button>
+    </div>
     <ul>
       <li><a href="#">
           <h3>Перфоратор BOSH BFG 3000</h3>
@@ -74,7 +109,7 @@
         </a>
 
         <div><button type="button">купить</button>
-              <button type="button">в закладки</button></div>
+          <button type="button">в закладки</button></div>
         <p><img src="img/new flag.png" alt="new"></p>
       </li>
 
@@ -145,7 +180,7 @@
     </article>
   </main>
   <footer>
-    <a><img src="img/logo.png" alt="логотип"></a>
+    <a><img src="img/logotipfooter.png" alt="логотип"></a>
     <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
       +7 (812) 555-05-55</p>
     <ul>

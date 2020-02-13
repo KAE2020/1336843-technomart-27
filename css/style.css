@@ -1,0 +1,65 @@
+body {
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-family: "Cuprum", "PTsans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+   
+    background-color: green;
+
+    }
+    a {
+        color: red;
+    }
+@font-face {
+font-family: "cuprum";
+src: url("cuprum.woff2") format("woff2"),
+     url("cuprum.woff") format("woff");
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+    font-family: "cuprum";
+    src: url("cuprumbold.woff2") format("woff2"),
+         url("cuprumbold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    }
+@font-face {
+    font-family: "cuprum";
+    src: url("cuprumbolditalic.woff2") format("woff2"),
+         url("cuprumbolditalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+        }
+@font-face {
+    font-family: "cuprum";
+    src: url("cuprumitalic.woff2") format("woff2"),
+        url("cuprumitalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+                }
+@font-face {
+   font-family: "PTsans";
+     src: url("PTsans.woff2") format("woff2"),
+          url("PTsans.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
+}
+@font-face {
+    font-family: "PTsans";
+    src: url("PTsansbold.woff2") format("woff2"),
+         url("PTsansbold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+        }
+body {
+padding: 0;
+margin: 0;
+font-family: "Cuprum", "PTsans", Arial, sans-serif;
+font-size: 14px;
+font-weight: normal;
+color: white;
+background-color: ;
+}
