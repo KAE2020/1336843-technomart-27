@@ -1,65 +1,707 @@
 body {
     color: black;
-    padding: 0;
-    margin: 0;
-    font-family: "Cuprum", "PTsans", Arial, sans-serif;
-    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Cuprum", "PT sans", Arial, sans-serif;
+    font-size: 17px;
     font-weight: normal;
-   
-    background-color: green;
+    background-color: #f4f7f9;
+}
 
-    }
-    a {
-        color: red;
-    }
-@font-face {
-font-family: "cuprum";
-src: url("cuprum.woff2") format("woff2"),
-     url("cuprum.woff") format("woff");
-font-weight: normal;
-font-style: normal;
+a {
+    text-decoration: none;
+    color: white;
 }
-@font-face {
-    font-family: "cuprum";
-    src: url("cuprumbold.woff2") format("woff2"),
-         url("cuprumbold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    }
-@font-face {
-    font-family: "cuprum";
-    src: url("cuprumbolditalic.woff2") format("woff2"),
-         url("cuprumbolditalic.woff") format("woff");
-    font-weight: bold;
-    font-style: italic;
-        }
-@font-face {
-    font-family: "cuprum";
-    src: url("cuprumitalic.woff2") format("woff2"),
-        url("cuprumitalic.woff") format("woff");
-    font-weight: normal;
-    font-style: italic;
-                }
-@font-face {
-   font-family: "PTsans";
-     src: url("PTsans.woff2") format("woff2"),
-          url("PTsans.woff") format("woff");
-            font-weight: normal;
-            font-style: normal;
+
+.visually-hidden {
+    visibility: hidden;
+    margin: 0px;
 }
-@font-face {
-    font-family: "PTsans";
-    src: url("PTsansbold.woff2") format("woff2"),
-         url("PTsansbold.woff") format("woff");
+
+ul {
+    list-style: none;
+}
+
+.header {
+    background-color: #293449;
+    border: none;
+    font-size: 17px;
+    width: auto;
+    height: 42px;
+    margin-bottom: 46px;
+}
+
+.topmenu {
+    display: flex;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 42px;
+}
+
+.icon {
+    background-color: #293449;
+    width: 150px;
+    line-height: 42px;
+    vertical-align: middle;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.topmenu .order {
+    background-color: #63a63e;
+    width: 150px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.topmenu :nth-child(3) {
+    position: relative;
+}
+
+.topmenu :nth-child(3)::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 16px;
+    background-image: url("../svg/icon-bookmark.svg");
+    opacity: 30%;
+    background-repeat: no-repeat;
+    display: inline;
+    top: 13px;
+    left: 10px;
+}
+
+.topmenu :nth-child(4) {
+    position: relative;
+}
+
+.topmenu :nth-child(4)::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url("../svg/cart-icon.svg");
+    opacity: 30%;
+    background-repeat: no-repeat;
+    display: inline;
+    top: 13px;
+    left: 10px;
+}
+
+.search {
+    background-color: #293449;
+    border: none;
+    color: white;
+    width: 270px;
+    text-align: left;
+    padding-left: 47px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.search svg {
+    left: 18px;
+    opacity: 30%;
+    position: absolute;
+}
+
+.underheader {
+    display: flex;
+    width: 940px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 42px;
+}
+
+.description {
+    font-family: "Cuprum", sans-serif;
+    font-size: 16px;
+    color: red;
+    font-style: italic;
+    line-height: 24px;
+    width: 270px;
+    padding-left: 50px;
+    margin-top: 0px;
+}
+
+.telephone {
+    position: relative;
+    font-size: 21px;
+    color: red;
+    border: 2px solid white;
+    width: 270px;
+    text-align: center;
+    line-height: 41px;
+    margin-right: 70px;
+}
+
+.telephone::before {
+    content: "";
+    position: absolute;
+    background-image: url("../svg/icon-phone.svg");
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    left: 15px;
+    top: 10px;
+}
+
+.adress {
+    font-family: "Cuprum", sans-serif;
+    color: #32425c;
+    font-size: 14px;
+    text-align: center;
+    width: 270px;
+    margin-top: 5px;
+}
+
+.enter {
+    position: relative;
+    border: 1px solid white;
+    background-color: white;
+    line-height: 43px;
     font-weight: bold;
-    font-style: normal;
-        }
-body {
-padding: 0;
-margin: 0;
-font-family: "Cuprum", "PTsans", Arial, sans-serif;
-font-size: 14px;
-font-weight: normal;
-color: white;
-background-color: ;
+    font-size: 21px;
+    width: 120px;
+    margin-left: auto;
+    margin-right: 0em;
+    padding-left: 35px;
+}
+
+.enter svg {
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    top: 12px;
+    left: 12px;
+}
+
+.registration {
+    border: 1px solid white;
+    background-color: white;
+    line-height: 43px;
+    font-weight: bold;
+    font-size: 21px;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #32425c;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    height: 55px;
+    font-size: 17px;
+    padding: 0px;
+    box-shadow: 0px 5px 0px 0px #293449;
+    margin-bottom: 60px;
+}
+
+main {
+    background-color: white;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 0px;
+}
+
+.container ul {
+    height: auto;
+    width: 940px;
+    height: 521px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.container h3 {
+    font-size: 24px;
+    padding-left: 24px;
+    color: #ffffff;
+}
+
+.container a {
+    padding-left: 24px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.container li:first-child {
+    background-color: #ffbf47;
+    width: 300px;
+    height: 124px;
+    color: #ffffff;
+    order: -3;
+    margin-bottom: 10px;
+}
+
+.container li:nth-child(2) {
+    background-color: #3bbce3;
+    width: 300px;
+    height: 124px;
+    color: #ffffff;
+    order: -2;
+    margin-bottom: 10px;
+}
+
+.container li:nth-child(3) {
+    background-color: #dc91d8;
+    width: 300px;
+    height: 124px;
+    color: #ffffff;
+    order: -1;
+    margin-bottom: 10px;
+}
+
+.container li:nth-child(4) {
+    background-color: #8ed78f;
+    width: 300px;
+    height: 124px;
+    color: #ffffff;
+    order: 1;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.container li:nth-child(5) {
+    background-color: #ffbf47;
+    width: 300px;
+    height: 124px;
+    order: 2;
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: -125px;
+}
+
+.drill {
+    background-image: url("../img/drill.jpg");
+    width: 621px;
+    height: 266px;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    order: 0;
+    margin-top: 10px;
+    padding: 0px;
+    border: 0px solid transparent;
+}
+
+.popular {
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popular h2 {
+    text-transform: uppercase;
+    font-family: "Cuprum", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    padding-left: 25px;
+}
+
+.popular a {
+    border: 1px solid #ee3643;
+    border-radius: 3px;
+    background-color: #ee3643;
+    width: 251px;
+    height: 38px;
+    align-self: center;
+    margin-right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular span {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.container2 {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.container2 li {
+    width: 220px;
+    height: 317px;
+    border: 1px solid #f4f7f9;
+    padding: 0px;
+}
+
+.container2 a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.container2 h3 {
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    margin: 0px;
+}
+
+del {
+    color: #adadad;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    line-height: 18px;
+}
+
+.container2 div {
+    border: 1px solid #ee3643;
+    border-radius: 3px;
+    width: 140px;
+    height: 38px;
+    background-color: #ee3643;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li span {
+    color: white;
+    font-weight: bold;
+}
+
+.container2 img {
+    padding: 0px;
+}
+
+.container2 li:last-child h3 {
+    padding-bottom: 43px;
+}
+
+.container2 p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.container3 {
+    padding: 0px;
+    width: 940px;
+    height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 65px;
+}
+
+.container3 li {
+    border: 1px solid #f4f7f9;
+    width: 220px;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servises {
+    background-color: #f4f7f9;
+}
+
+.servises-content {
+    width: 940px;
+    height: 522px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.servises h2 {
+    padding-top: 65px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: "Cuprum", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.servises p {
+    margin-top: 25px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 70px;
+}
+
+.servises ul {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 125px;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.servises button {
+    border: 1px solid transparent;
+    width: 240px;
+    height: 63px;
+    background-color: #32425c;
+    font-family: "Cuprum", sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.servises-content .flex-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.results {
+    width: 620px;
+    height: 215px;
+    position: relative;
+}
+
+.results h3 {
+    font-size: 34px;
+    color: #32425c;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.results p {
+    margin-top: 0px;
+}
+
+.results img {
+    top: 17px;
+    position: absolute;
+    right: 0px;
+}
+
+.information {
+    width: 940px;
+    height: 537px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.information h2 {
+    text-transform: uppercase;
+    font-family: "Cuprum", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+
+.information p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.delivery {
+    width: 540px;
+    height: 375px;
+}
+
+.information li {
+    font-family: "PT Sans" sans-serif;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding-left: 0px;
+}
+
+.information li:last-child {
+    margin-bottom: 32px;
+}
+
+.delivery a div {
+    border: 1px solid #ee3643;
+    border-radius: 3px;
+    background-color: #ee3643;
+    width: 220px;
+    height: 38px;
+    font-family: "Cuprum", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 85px;
+}
+
+.contacts {
+    width: 300px;
+    height: 375px;
+}
+
+.information ul {
+    padding: 0px;
+}
+
+.contacts button {
+    border: 1px solid #ee3643;
+    border-radius: 3px;
+    background-color: #ee3643;
+    width: 300px;
+    height: 38px;
+    font-family: "Cuprum", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 85px;
+    margin-top: 40px;
+    color: white;
+    padding: 0px;
+}
+
+footer {
+    background-color: #32425c;
+    height: 300px;
+    color: white;
+}
+
+.footer1 {
+    width: 940px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer1 ul {
+    display: flex;
+    width: 550px;
+    height: 60px;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: flex-end;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.footer2 {
+    width: 940px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.footer2 ul {
+    display: flex;
+    width: 528px;
+    height: 50px;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: flex-start;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.footer2 ul li a {
+    color: #ffd180;
+}
+
+.footer2 p {
+    margin: 0px;
+    font-size: 18px;
+    line-height: 24px;
+    width: 330px;
+}
+
+footer .main-theme {
+    background-color: #293449;
+}
+
+.footer3 {
+    width: 940px;
+    height: 107px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.footer3 p {
+    margin: 0px;
+}
+
+.copyright {
+    width: 240px;
+    margin: 0px;
+    margin-right: 150px;
+}
+
+.e-mail {
+    width: 140;
+    margin: 0px;
+}
+
+.site {
+    width: 113px;
+    margin: 0px;
+    margin-left: auto;
+}
+
+.footer-social {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 118px;
+}
+
+.footer3 a:last-child, .footer3 a:nth-last-child(2) {
+    color: #ffd180;
 }
