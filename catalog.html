@@ -4,48 +4,59 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="cdd/normalize.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <a><img src="img/logotip.png" alt="логотип"></a>
-    <button type="button">Поиск:</button>
-    <div>
-      <a href="#">Закладки: 0</a>
-      <a href="#">Корзина:</a>
-      <a href="#">Оформить заказ</a>
-    </div>
+    <div class="header">
+      <div class="topmenu wrapper">
+        <a href="index.html"><img src="img/logo.png" class="logo" alt="логотип" width="220" height="47"></a>
 
-    <p>Интернет-магазин
-      строительных материалов
-      и инструмента для ремонта</p>
-    <a href="tel:+78125550555">
-      <div>+7 (812) 555-05-55</div>
-    </a>
-    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-    </a>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
+          <input class="search" type="text" placeholder="Поиск:" name="search">
+          <input class="search-icon" type="submit" value="Поиск">
+        </form>
 
-    <div>
-      <div><a href="#">Равшан Джамшутович</a>
-        <button type="button"></button></div>
-      <div>
-        <a href="#">Мои заказы</a>
-        <a href="#">Личный кабинет</a>
+        <a href="#" class="bookmark">Закладки: 0</a>
+        <a href="#" class="cart active">Корзина: 10</a>
+        <a href="#" class="order">Оформить заказ</a>
       </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Компания</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Спецпредложения</a></li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
+
+    <div class="underheader wrapper">
+      <p class="description">Интернет-магазин<br>
+        строительных материалов<br>
+        и инструмента для ремонта</p>
+      <div class="contact-details"><a class="telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      </div>
+      <div class="authorized">
+        <div class="user">
+          <a class="username" href="#">Равшан Джамшутович</a>
+          <a class="exit-login" href="#"></a>
+        </div>
+        <div>
+          <a class="my-orders" href="#">Мои заказы</a>
+          <a class="account" href="#">Личный кабинет</a>
+        </div>
+      </div>
+      </div>
+      <nav class="wrapper">
+        <ul class="navigation">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
   </header>
   <main>
     <h1 class="visually-hidden">Каталог</h1>
@@ -54,7 +65,9 @@
     <a href="#">инструмент</a>
     <h2>ПЕРФОРАТОРЫ</h2>
     <form action="https://echo/htmlacademy.ru" oninput="priceoutput.value=pricecount.value" method="post">
-      <div><h3>фильтр:</h3></div>
+      <div>
+        <h3>фильтр:</h3>
+      </div>
       <h4>цена:</h4>
       <div>
         <label for="pricecount"></label>
@@ -71,13 +84,13 @@
         <li><input type="checkbox" id="brand" name="brand" value="makita" checked>MAKITA</li>
         <li><input type="checkbox" id="brand" name="brand" value="dewalt">DEWALT</li>
         <li><input type="checkbox" id="brand" name="brand" value="hitachi">HITACHI</li>
-            </ul>
+      </ul>
       <h4>питание:</h4>
       <ul>
         <label for="power"></label>
-          <li><input type="radio" name="power" id="power" value="battery" checked>АККУМУЛЯТОРНЫЕ</li>
+        <li><input type="radio" name="power" id="power" value="battery" checked>АККУМУЛЯТОРНЫЕ</li>
         <li><input type="radio" name="power" value="electricity">СЕТЕВЫЕ</li>
-            </ul>
+      </ul>
       <input type="submit" value="показать">
     </form>
     <div>
@@ -180,33 +193,45 @@
     </article>
   </main>
   <footer>
-    <a><img src="img/logotipfooter.png" alt="логотип"></a>
-    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-      +7 (812) 555-05-55</p>
-    <ul>
-      <li><a href="#">Компания</a></li>
-      <li><a href="#">Новости</a></li>
-      <li><a href="#">Каталог</a></li>
-      <li><a href="#">Доставка</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Материалы</a></li>
-      <li><a href="#">Техника</a></li>
-      <li><a href="#">Инструмент</a></li>
-      <li><a href="#">Спецпредложения</a></li>
-    </ul>
-    <p>© 2010-2019 Компания "Техномарт"
-      Все права защищены</p>
-    <ul>
-      <li><a href="#">Вконтакте</a></li>
-      <li><a href="#">Фэйсбук</a></li>
-      <li><a href="#">Инстаграм</a></li>
-    </ul>
-    <p>Обратная связь:</p>
-    <a href="http://mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-    <p>Разработано -</p>
-    <a href="http://htmlacademy.ru">htmlacademy.ru</a>
+    <div class="footer-nav">
+      <a><img src="img/logofooter.png" alt="логотип"></a>
+
+      <ul>
+        <li><a href="#">Компания</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="footer-catalog">
+      <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        +7 (812) 555-05-55</p>
+      <ul>
+        <li><a href="#">Материалы</a></li>
+        <li><a href="#">Техника</a></li>
+        <li><a href="#">Инструмент</a></li>
+        <li><a href="#">Спецпредложения</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-connect wrapper">
+        <p>© 2010-2019 Компания "Техномарт" Все права защищены</p>
+        <ul class="footer-social">
+          <li><a class="btn-vk" href="#"></a></li>
+          <li><a class="btn-fb" href="#"></a></li>
+          <li><a class="btn-instagram" href="#"></a></li>
+        </ul>
+        <div class="e-mail">
+          <p>Обратная связь:</p>
+          <a href="http://mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
+        <div class="site">
+          <p>Разработано —</p>
+          <a href="http://htmlacademy.ru">htmlacademy.ru</a>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 

@@ -22,7 +22,7 @@ ul {
     list-style: none;
 }
 
-.directory {
+.wrapper {
     width: 940px;
     padding: 0 10px;
     margin: 0 auto;
@@ -48,7 +48,9 @@ ul {
     vertical-align: middle;
     text-align: center;
 }
-
+.topmenu .active {
+    background-color: #ee3643;
+   }
 .topmenu .order {
     background-color: #63a63e;
     width: 150px;
@@ -56,32 +58,32 @@ ul {
     text-align: center;
 }
 
-.topmenu :nth-child(3) {
+.topmenu .bookmark {
     position: relative;
 }
 
-.topmenu :nth-child(3)::before {
+.topmenu .bookmark::before {
     position: absolute;
     content: "";
     width: 14px;
     height: 16px;
-    background-image: url("../svg/icon-bookmark.svg");
+    background-image: url("../img/icon-bookmark.svg");
     opacity: 0.3;
     background-repeat: no-repeat;
     top: 13px;
     left: 10px;
 }
 
-.topmenu :nth-child(4) {
+.topmenu .cart {
     position: relative;
 }
 
-.topmenu :nth-child(4)::before {
+.topmenu .cart::before {
     position: absolute;
     content: "";
     width: 15px;
     height: 15px;
-    background-image: url("../svg/cart-icon.svg");
+    background-image: url("../img/cart-icon.svg");
     opacity: 30%;
     background-repeat: no-repeat;
     top: 13px;
@@ -120,7 +122,7 @@ ul {
 .search-icon {
     position: absolute;
     content: "";
-    background-image: url("../svg/icon-search.svg");
+    background-image: url("../img/icon-search.svg");
     border: none;
     outline: none;
     width: 17px;
@@ -134,7 +136,7 @@ ul {
 }
 
 .search:focus .search-icon {
-    background-image: url("../svg/icon-searchred.svg");
+    background-image: url("../img/icon-searchred.svg");
 }
 
 .search::placeholder {
@@ -173,7 +175,7 @@ ul {
 .telephone::before {
     content: "";
     position: absolute;
-    background-image: url("../svg/icon-phone.svg");
+    background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
     width: 19px;
     height: 19px;
@@ -206,7 +208,68 @@ ul {
     width: 118px;
     padding-left: 42px;
 }
-
+.authorized {
+    display: block; 
+    margin: 0 0 0 auto;
+}
+.user {
+    
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid white;
+    background-color: white;
+    line-height: 43px;
+    width: 300px;
+    margin-bottom: 7px;
+   
+}
+.username {
+  color: #000000;  
+  font-size: 21px;
+  padding-left: 47px;
+}
+.user::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    background-image: url("../img/icon-user.svg");
+    left: 11px;
+    top: 11px;
+}
+.exit-login {
+    content: "";
+    background-image: url("../img/icon-logout.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 17px;
+    margin-left: 33px;
+   display: inline-block; 
+   vertical-align: middle;
+     
+}
+.my-orders, 
+.account {
+    text-decoration: underline;
+    font-size: 16px;
+    color: #32425c;
+  
+} 
+.my-orders {
+    position: relative;
+    margin-left: 18px;
+    margin-right: 33px;
+}
+.my-orders::after {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #32425c;
+    content: "";
+    left: 90px;
+    top: 8px;
+}
 .enter svg {
     position: absolute;
     width: 20px;
@@ -278,7 +341,7 @@ main {
     color: #ffffff;
 }
 
-.departments a {
+.departments-btn {
     display: inline-block;
     text-align: center;
     width: 135px;
@@ -310,7 +373,7 @@ main {
     position: absolute;
     width: 44px;
     height: 65px;
-    background-image: url("../svg/icon-1.svg");
+    background-image: url("../img/icon-1.svg");
     left: 212px;
     top: 30px;
 }
@@ -330,7 +393,7 @@ main {
     position: absolute;
     width: 78px;
     height: 63px;
-    background-image: url("../svg/icon-5.svg");
+    background-image: url("../img/icon-5.svg");
     left: 191px;
     top: 30px;
 }
@@ -345,7 +408,7 @@ main {
     position: absolute;
     width: 75px;
     height: 61px;
-    background-image: url("../svg/icon-2.svg");
+    background-image: url("../img/icon-2.svg");
     left: 197px;
     top: 30px;
 }
@@ -360,7 +423,7 @@ main {
     position: absolute;
     width: 78px;
     height: 62px;
-    background-image: url("../svg/icon-3.svg");
+    background-image: url("../img/icon-3.svg");
     left: 191px;
     top: 30px;
 }
@@ -387,7 +450,7 @@ main {
     position: absolute;
     width: 59px;
     height: 72px;
-    background-image: url("../svg/icon-4.svg");
+    background-image: url("../img/icon-4.svg");
     left: 195px;
     top: 30px;
 }
@@ -429,7 +492,7 @@ input[type=radio] {
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: 153px;
+    top: 120px;
 }
 
 .left {
@@ -500,14 +563,21 @@ input[type=radio] {
     background-position: 100% 100%;
     height: 266px;
 }
-
+.slide:nth-child(2) {
+    background: #231614;
+    background-repeat: no-repeat;
+   
 }
-
 .slide-text {
     padding-top: 26px;
     padding-left: 22px;
     width: 300px;
     color: #ffffff;
+}
+.slide-text a {
+    width: 195px;
+    height: 38px;
+    margin-top: 65px;
 }
 
 #next:checked~.slides .slide:nth-child(2), #real:checked~.slides .slide:nth-child(1) {
@@ -515,7 +585,7 @@ input[type=radio] {
 }
 
 .popular {
-    background-color: #f4f7f9;
+    background-color: #f9f5f0;
     display: flex;
     justify-content: space-between;
     width: 940px;
@@ -533,22 +603,22 @@ input[type=radio] {
     color: #32425c;
 }
 
-.popular a {
+
+.red-btn {
     border: 1px solid #ee3643;
     border-radius: 3px;
     background-color: #ee3643;
-    width: 251px;
-    height: 38px;
     align-self: center;
-    margin-right: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.popular .all {
     text-transform: uppercase;
     font-size: 14px;
+}
+.all {
+    width: 251px;
+    height: 38px;
+    margin-right: 24px;
 }
 
 .catalog-items {
@@ -635,7 +705,7 @@ li span {
 }
 
 .brands li {
-    border: 1px solid #f4f7f9;
+    border: 1px solid #eaeaea;
     width: 220px;
     height: 145px;
     display: flex;
@@ -647,12 +717,7 @@ li span {
     background-color: #f4f7f9;
 }
 
-.services-content {
-    width: 940px;
-    height: 522px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .services h2 {
     padding-top: 65px;
@@ -672,10 +737,9 @@ li span {
     margin-bottom: 70px;
 }
 
-.services ul {
-    display: flex;
-    flex-direction: column;
-    width: 240px;
+.services-slider-control {
+    display: block;
+     width: 240px;
     height: 125px;
     padding: 0px;
     margin-top: 0px;
@@ -779,17 +843,8 @@ li span {
 }
 
 .delivery a {
-    border: 1px solid #ee3643;
-    border-radius: 3px;
-    background-color: #ee3643;
     width: 220px;
     height: 38px;
-    font-family: "Cuprum", sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 85px;
 }
 
@@ -803,20 +858,10 @@ li span {
 }
 
 .contacts .help {
-    border: 1px solid #ee3643;
-    border-radius: 3px;
-    background-color: #ee3643;
     width: 300px;
     height: 38px;
-    font-family: "Cuprum", sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 85px;
     margin-top: 40px;
-    color: white;
     padding: 0px;
 }
 
@@ -925,8 +970,6 @@ footer .footer-bottom {
     margin-left: 150px;
 }
 
-.footer-social li {}
-
 .footer-social a {
     display: inline-block;
     width: 42px;
@@ -939,7 +982,7 @@ footer .footer-bottom {
 .btn-vk::before {
     content: "";
     position: absolute;
-    background-image: url("../svg/icon-vk.svg");
+    background-image: url("../img/icon-vk.svg");
     background-repeat: no-repeat;
     width: 26px;
     height: 15px;
@@ -950,7 +993,7 @@ footer .footer-bottom {
 .btn-fb::before {
     content: "";
     position: absolute;
-    background-image: url("../svg/icon-fb.svg");
+    background-image: url("../img/icon-fb.svg");
     background-repeat: no-repeat;
     width: 12px;
     height: 22px;
@@ -961,7 +1004,7 @@ footer .footer-bottom {
 .btn-instagram::before {
     content: "";
     position: absolute;
-    background-image: url("../svg/icon-insta.svg");
+    background-image: url("../img/icon-insta.svg");
     background-repeat: no-repeat;
     width: 21px;
     height: 21px;
