@@ -123,7 +123,7 @@
     </section>
     <section class="pop-product wrapper">
       <div class="popular">
-        <h2>ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
+        <h2 class="title-h2">ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
         <a class="all red-btn" href="#">все популярные товары</a>
       </div>
       <ul class="catalog-items">
@@ -131,8 +131,8 @@
           <a href="#">
             <img src="img/perforator_1i.jpg" alt="Перфоратор BOSH BFG 9000">
             <h3>Перфоратор BOSH<br> BFG 9000</h3>
-            <p><del class="disqualify">32500 Р.</del></p>
-            <div><span>25500 Р.</span></div>
+            <del class="disqualify">32500 Р.</del>
+            <div class="actual-price">25500 Р.</div>
 
           </a>
         </li>
@@ -140,8 +140,8 @@
         <li><a href="#">
             <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 3000">
             <h3>Перфоратор BOSH<br> BFG 3000</h3>
-            <p><del class="disqualify">22500 Р.</del></p>
-            <div><span>15500 Р.</span></div>
+            <del class="disqualify">22500 Р.</del>
+            <div class="actual-price">15500 Р.</div>
           </a>
         </li>
 
@@ -149,8 +149,8 @@
           <a href="#">
             <img src="img/perforator_2.jpg" alt="Перфоратор BOSH BFG 6000">
             <h3>Перфоратор BOSH<br> BFG 6000</h3>
-            <p><del class="disqualify">30500 Р.</del></p>
-            <div><span>25500 Р.</span></div>
+            <del class="disqualify">30500 Р.</del>
+            <div class="actual-price">25500 Р.</div>
           </a>
         </li>
 
@@ -158,14 +158,14 @@
           <a href="#">
             <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 2000">
             <h3>Перфоратор BOSH<br> BFG 2000</h3>
-            <div><span>12500 Р.</span></div>
+            <div class="actual-price">12500 Р.</div>
           </a>
         </li>
       </ul>
     </section>
     <section class="pop-trademark wrapper">
       <div class="popular">
-        <h2>ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
+        <h2 class="title-h2">ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
         <a class="all red-btn" href="#">все производители</a>
       </div>
       <ul class="brands wrapper">
@@ -185,9 +185,9 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всез сил, чтобы сделать ваши покупки приятными.</p>
         <div class="services-slider">
-          <input type="radio" id="slide-delivery" name="swith" checked>
-          <input type="radio" id="slide-warranty" name="swith">
-          <input type="radio" id="slide-credit" name="swith">
+          <input type="radio" id="slide-delivery" name="switch" checked>
+          <input type="radio" id="slide-warranty" name="switch">
+          <input type="radio" id="slide-credit" name="switch">
 
           <ul class="services-slider-control">
             <li>
@@ -201,25 +201,23 @@
             </li>
           </ul>
           <div class="results">
-            <div class="results-delivery">
+            <div class="results-slider" id="slide1">
               <h3>ДОСТАВКА</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
             </div>
-            <!--
-            <div class="results-warranty">
+            <div class="results-slider" id="slide2">
               <h3>ГАРАНТИЯ</h3>
               <p>Условия гарантии</p>
-              <img src="#" alt="#">
             </div>
-            <div class="results-credit">
+            <div class="results-slider" id="slide3">
               <h3>КРЕДИТ</h3>
               <p>Информация о кредите</p>
-              <img src="#" alt="#">
-            </div>-->
+            </div>
           </div>
         </div>
+      </div>
     </section>
     <section class="information wrapper">
       <div class="delivery">
