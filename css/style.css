@@ -623,9 +623,15 @@ input[type=radio] {
     height: 38px;
     margin-top: 65px;
 }
-
-#next:checked~.slides .slide:nth-child(2), #real:checked~.slides .slide:nth-child(1) {
+.slide {
     display: none;
+}
+#next:checked~.slides .slide:nth-child(2), #real:checked~.slides .slide:nth-child(1) {
+    display: block;
+}
+.slides {
+    padding: 0;
+    margin: 0;
 }
 
 .popular {
@@ -873,7 +879,9 @@ input[type=radio] {
     display: none;
 }
 
-#slide-delivery:checked~.services-slider results-slider:nth-child(1), #slide-warranty:checked~.services-slider results-slider:nth-child(2), #slide-credit:checked~.services-slider results-slider:nth-child(3) {
+#slide-delivery:checked~.results results-slider:nth-child(1), 
+#slide-warranty:checked~.results results-slider:nth-child(2), 
+#slide-credit:checked~.results results-slider:nth-child(3) {
     display: block;
 }
 
