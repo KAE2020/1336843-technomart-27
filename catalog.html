@@ -31,7 +31,7 @@
     <div class="underheader wrapper">
       <p class="description">Интернет-магазин<br>
         строительных материалов<br>
-        и инструмента для ремонта</p>
+        и инструментов для ремонта</p>
       <div class="contact-details"><a class="telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
@@ -71,35 +71,63 @@
       <h2 class="title-h2 title-h2-catalog">ПЕРФОРАТОРЫ</h2>
       <div class="filter-catalog">
         <section class="filter-control">
-          <form action="https://echo/htmlacademy.ru" oninput="priceoutput.value=pricecount.value" method="post">
-            <div>
-              <h3>фильтр:</h3>
+          <div>
+            <h3 class="filter-header">фильтр:</h3>
+          </div>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="range-filter">
+              <h4 class="filter-title-price">Цена:</h4>
+              <div class="range-filter-controls">
+                <div class="range-filter-scale">
+                  <div class="range-filter-bar"></div>
+                </div>
+                <div class="range-filter-toggle range-filter-min-toggle"></div>
+                <div class="range-filter-toggle range-filter-max-toggle"></div>
+              </div>
+              <div class="range-filter-price">
+                <input class="range-filter-min-price" type="text" value="0">
+                — <input class="range-filter-max-price" type="text" value="30000">
+              </div>
             </div>
-            <h4>цена:</h4>
-            <div class="range-filter-control">
-              <div class="range-filter-scale">
-              <label for="pricecount"></label>
-              0<input type="range" id="pricecount" name="pricecount" min="0" max="30000" step="250">30000
+            <div class="producer-filter">
+              <h4>производители:</h4>
+              <ul class="producers">
+                <li>
+                  <input type="checkbox" id="brand1" name="bosch" checked>
+                  <label for="brand1">BOSCH</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="brand2" name="interskol">
+                  <label for="brand2">ИНТЕРСКОЛ</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="brand3" name="makita" checked>
+                  <label for="brand3">MAKITA</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="brand4" name="dewalt">
+                  <label for="brand4">DEWALT</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="brand5" name="hitachi">
+                  <label for="brand5">HITACHI</label>
+                </li>
+              </ul>
             </div>
-            <div>
-              <output name="priceoutput"></output>
+            <div class="power-filter">
+              <h4>питание:</h4>
+              <ul class="powers">
+                <li>
+                  <input type="radio" name="battery" id="power1" checked>
+                  <label for="power1">АККУМУЛЯТОРНЫЕ</label>
+                </li>
+                <li>
+                  <input type="radio" name="electricity" id="power2">
+                  <label for="power2">СЕТЕВЫЕ</label>
+                </li>
+              </ul>
+              <button class="btn-filter" type="submit">Показать</button>
             </div>
-            <h4>производители:</h4>
-            <ul>
-              <label for="brand"></label>
-              <li><input type="checkbox" id="brand" name="brand" value="bosch" checked>BOSCH</li>
-              <li><input type="checkbox" id="brand" name="brand" value="interskol">ИНТЕРСКОЛ</li>
-              <li><input type="checkbox" id="brand" name="brand" value="makita" checked>MAKITA</li>
-              <li><input type="checkbox" id="brand" name="brand" value="dewalt">DEWALT</li>
-              <li><input type="checkbox" id="brand" name="brand" value="hitachi">HITACHI</li>
-            </ul>
-            <h4>питание:</h4>
-            <ul>
-              <label for="power"></label>
-              <li><input type="radio" name="power" id="power" value="battery" checked>АККУМУЛЯТОРНЫЕ</li>
-              <li><input type="radio" name="power" value="electricity">СЕТЕВЫЕ</li>
-            </ul>
-            <input type="submit" value="показать">
           </form>
         </section>
         <section class="sorting">
@@ -118,7 +146,7 @@
             <li>
               <a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 3000">
-                <h3>Перфоратор BOSH<br> BFG 3000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 3000</h3>
                 <del class="disqualify">22500 Р.</del>
                 <div class="actual-price">15500 Р.</div>
               </a>
@@ -126,15 +154,15 @@
 
             <li><a href="#">
                 <img src="img/perforator_2.jpg" alt="Перфоратор BOSH BFG 6000">
-                <h3>Перфоратор BOSH<br> BFG 6000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 6000</h3>
                 <del class="disqualify">30500 Р.</del>
                 <div class="actual-price">25500 Р.</div>
               </a>
             </li>
 
-            <li><a href="#">
+            <li class="new"><a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 2000">
-                <h3>Перфоратор BOSH<br> BFG 2000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 2000</h3>
                 <div class="actual-price">12500 Р.</div>
               </a>
             </li>
@@ -142,15 +170,15 @@
             <li>
               <a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 3000">
-                <h3>Перфоратор BOSH<br> BFG 3000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 3000</h3>
                 <del class="disqualify">22500 Р.</del>
                 <div class="actual-price">15500 Р.</div>
               </a>
             </li>
 
-            <li><a href="#">
+            <li class="new"><a href="#">
                 <img src="img/perforator_2.jpg" alt="Перфоратор BOSH BFG 6000">
-                <h3>Перфоратор BOSH<br> BFG 6000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 6000</h3>
                 <del class="disqualify">30500 Р.</del>
                 <div class="actual-price">25500 Р.</div>
               </a>
@@ -158,15 +186,15 @@
 
             <li><a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 2000">
-                <h3>Перфоратор BOSH<br> BFG 2000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 2000</h3>
                 <div class="actual-price">12500 Р.</div>
               </a>
             </li>
 
-            <li>
+            <li class="new">
               <a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 3000">
-                <h3>Перфоратор BOSH<br> BFG 3000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 3000</h3>
                 <del class="disqualify">22500 Р.</del>
                 <div class="actual-price">15500 Р.</div>
               </a>
@@ -174,7 +202,7 @@
 
             <li><a href="#">
                 <img src="img/perforator_2.jpg" alt="Перфоратор BOSH BFG 6000">
-                <h3>Перфоратор BOSH<br> BFG 6000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 6000</h3>
                 <del class="disqualify">30500 Р.</del>
                 <div class="actual-price">25500 Р.</div>
               </a>
@@ -182,7 +210,7 @@
 
             <li><a href="#">
                 <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 2000">
-                <h3>Перфоратор BOSH<br> BFG 2000</h3>
+                <h3>Перфоратор BOSCH<br> BFG 2000</h3>
                 <div class="actual-price">12500 Р.</div>
               </a>
             </li>
@@ -205,8 +233,8 @@
           кирпиче,
           бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
-          шуруповерта и отбойного молотка.<br>
-          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+          шуруповерта и отбойного молотка.
+          В<br> ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
           ударная
           дрель.</p>
       </div>
@@ -236,7 +264,7 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-connect wrapper">
-        <p>© 2010-2019 Компания "Техномарт" Все права защищены</p>
+        <p>© 2010-2019 Компания «Техномарт» Все права защищены</p>
         <ul class="footer-social">
           <li><a class="btn-vk" href="#"></a></li>
           <li><a class="btn-fb" href="#"></a></li>
