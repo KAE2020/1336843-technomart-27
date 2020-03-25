@@ -92,7 +92,7 @@
               </div>
               <div class="slide" id="slide2">
                 <div class="slide-text">
-                  <h3>ПЕРФОРАТОРЫ</h3>
+                  <h3 class="drill-title">ПЕРФОРАТОРЫ</h3>
                   <p>Настоящие мужские игрушки</p>
                   <a class="red-btn" href="catalog.html">открыть каталог</a>
                 </div>
@@ -117,39 +117,48 @@
         <a class="all red-btn" href="#">все популярные товары</a>
       </div>
       <ul class="catalog-items">
-        <li>
-          <a href="#">
-            <img src="img/perforator_1i.jpg" alt="Перфоратор BOSH BFG 9000">
-            <h3>Перфоратор BOSCH<br> BFG 9000</h3>
-            <del class="disqualify">32500 Р.</del>
-            <div class="actual-price">25500 Р.</div>
-
-          </a>
+        <li class="catalog-items-file">
+          <div class="catalog-actions">
+            <a href="#" class="catalog-item-buy">Купить</a>
+            <a href="#" class="catalog-item-bookmark">В закладки</a>
+          </div>
+          <img src="img/perforator_1i.jpg" alt="Перфоратор BOSH BFG 9000">
+          <h3>Перфоратор BOSCH<br> BFG 9000</h3>
+          <del class="disqualify">32500 Р.</del>
+          <div class="actual-price">25500 Р.</div>
         </li>
 
-        <li><a href="#">
-            <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 3000">
-            <h3>Перфоратор BOSCH<br> BFG 3000</h3>
-            <del class="disqualify">22500 Р.</del>
-            <div class="actual-price">15500 Р.</div>
-          </a>
+        <li class="catalog-items-file">
+          <div class="catalog-actions">
+            <a href="#" class="catalog-item-buy">Купить</a>
+            <a href="#" class="catalog-item-bookmark">В закладки</a>
+          </div>
+          <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 3000">
+          <h3>Перфоратор BOSCH<br> BFG 3000</h3>
+          <del class="disqualify">22500 Р.</del>
+          <div class="actual-price">15500 Р.</div>
+
         </li>
 
-        <li>
-          <a href="#">
-            <img src="img/perforator_2.jpg" alt="Перфоратор BOSH BFG 6000">
-            <h3>Перфоратор BOSCH<br> BFG 6000</h3>
-            <del class="disqualify">30500 Р.</del>
-            <div class="actual-price">25500 Р.</div>
-          </a>
+        <li class="catalog-items-file">
+          <div class="catalog-actions">
+            <a href="#" class="catalog-item-buy">Купить</a>
+            <a href="#" class="catalog-item-bookmark">В закладки</a>
+          </div>
+          <img src="img/perforator_2.jpg" alt="Перфоратор BOSH BFG 6000">
+          <h3>Перфоратор BOSCH<br> BFG 6000</h3>
+          <del class="disqualify">30500 Р.</del>
+          <div class="actual-price">25500 Р.</div>
         </li>
 
-        <li class="new">
-          <a href="#">
-            <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 2000">
-            <h3>Перфоратор BOSCH<br> BFG 2000</h3>
-            <div class="actual-price">12500 Р.</div>
-          </a>
+        <li class="catalog-items-file new">
+          <div class="catalog-actions">
+            <a href="#" class="catalog-item-buy">Купить</a>
+            <a href="#" class="catalog-item-bookmark">В закладки</a>
+          </div>
+          <img src="img/perforator_1.jpg" alt="Перфоратор BOSH BFG 2000">
+          <h3>Перфоратор BOSCH<br> BFG 2000</h3>
+          <div class="actual-price actual-price-last">12500 Р.</div>
         </li>
       </ul>
     </section>
@@ -234,7 +243,8 @@
         <h2>КОНТАКТЫ</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <a href="#"><img src="img/map.jpg" alt="схема проезда"></a>
+        <a class="little-map" href="#">
+          <img src="img/map.jpg" alt="схема проезда"></a>
         <a class="help red-btn" href="#">заблудились? напишите нам!</a>
       </div>
     </section>
@@ -280,6 +290,47 @@
       </div>
     </div>
   </footer>
+  <div class="modal-content">
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <div class="modal-content-wrapper">
+        <div class="modal-content-half">
+          <label for="name-field">Ваше имя:</label>
+          <input type="text" name="login" id="name-field" placeholder="Представьтесь, пожалуйста">
+        </div>
+        <div class="modal-content-half">
+          <label for="email-field">Ваш e-mail</label>
+          <input type="email" name="email" id="email-field" placeholder="Для отправки ответа">
+        </div>
+        <label for="message">Текст письма:</label>
+        <textarea name="comments" id="message">В свободной форме</textarea>
+      </div>
+      <div class="modal-bottom">
+        <div class="modal-content-wrapper">
+          <button class="red-btn btn-modal-content" type="submit">Отправить</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-content-map">
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651625!2d30.320894615997645!3d59.93879418187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462893531736"
+      width="940" height="446" style="border:0" allowfullscreen></iframe>
+  </div>
+  <div class="modal-content-cart">
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    <div class="modal-content-wrapper">
+      <b>Товар добавлен в корзину!</b>
+    </div>
+    <div class="modal-bottom">
+      <div class="modal-content-wrapper">
+        <a class="red-btn order-btn" href="#">Оформить заказ</a>
+        <button class="continue" type="submit">Продолжить покупки</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/javascript.js"></script>
 </body>
 
 </html>
